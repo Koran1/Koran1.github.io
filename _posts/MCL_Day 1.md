@@ -1,0 +1,53 @@
+---
+layout: post
+title: MCL_Day 1
+subtitle: Machine Learning 기초 개념
+gh-repo: daattali/beautiful-jekyll
+gh-badge: 
+tags: [test]
+comments: false
+---
+## 2023 MCL Internship에 참여했다!
+ 학부 3학년 때 디지털신호처리를 가르쳐주셨던 교수님께서 2023 겨울 방학 때 간단한 인턴쉽을 계획한다고 하셨다. 교수님의 [MCL(Media Communications Lab)](https://mcl.korea.ac.kr/)에서 주최하는 2023 MCL Internship은 2023.02.13~2.24 2주간 진행하며 Computer Vision, Machine Learning, Artificial Intelligence에 대한 연구들을 공부할 수 있는 좋은 기회였다. _Python_ 을 기본 언어로 삼고 _Pytorch_ 라이브러리를 활용해 딥러닝(Deep Learning) 실습들을 하고 있다.
+
+## Google Colab
+ [Google Colab](https://colab.research.google.com/) 은 Google에서 GPU를 할당해주는 방식의 클라우드 기반 무료 개발 환경이다.
+| **장점** | **단점** | 
+| :------ |:--- |
+| 무료다! | 90분 이상 아무 동작이 없을 경우 Time out 이 발생한다 |
+| Google Drive와 연동이 가능하다 | 12시간 이상 세션이 동작할 경우 자동 종료된다 |
+| 오류발생 시 검색이 쉽다 | 사용할 때마다 Google Drive를 Mount해야 한다  |
+
+(아직 5번 밖에 사용해보지 않았지만 Colab을 사용할 때마다 Google Drive를 연동(Mount)시켜줘야 하는 점이 의외로 불편했다)
+확장자는 .ipynb지만 코드들은 Python 기반이어서 Colab이 아닌 개인 개발 환경에서 작동하게끔 변환할 생각이다.
+
+## AI, ML, DL
+ 처음 세 개념을 접했을 때 _AI(Artificial Intelligence), ML(Machine Learning), DL(Deep Learning) 세 개 다 비슷한거 아닌가? 명확한 차이가 뭐지?_ 라는 의문이 많았었는데 다음 도표를 보고 조금이나마 이해가 되었다.
+
+<img src="/assets/img/AI,ML,DL.jpg" width="50%" height="50%"> 
+
+특히 ML(Machine Learning) GPU를 활용해 병렬 컴퓨팅을 통해 빠른 연산을 처리한다. ML은 훈련하고자 하는 데이터의 특성에 따라 학습 방법이 분류되기도 한다. 
+> 1. **지도 학습(Supervised Learning)** : 정답 O, 예측 모델에 사용
+> 2. **비지도 학습(Unsupervised Learning)** : 정답 X, 군집화 모델에 사용
+> 3. **강화 학습(Reinforcement Learning)** : 시뮬레이션 반복 학습을 통해 성능 강화에 사용
+
+해당 분야에서 자주 쓰는 용어들을 정리해보았다.
+* 라벨(Label, Target, Ground Truth)
+> 정답이라고 생각하면 쉽다. 데이터를 모델이라는 함수에 입력으로 넣었을 때 원하는 출력이 **라벨**이다.
+* 클래스(Class)
+> 라벨의 종류이다. 예) 비행기, 차, 고양이, 개, ...  
+예를 들어 라벨들 1, _1_, **1**, **_1_** 모두 다 1의 클래스에 속한다.
+
+* 배치(Batch)/ Batch_size
+> 한 번에 들어가는 데이터 개수
+* 에폭(Epoch)
+> 한 번의 학습 과정
+
+ 예를 들어 총 1000 개의 데이터를 처리하고자 했을 때 10번 학습 (epochs = 10), 한 번에 500개 씩 (batch size = 500) 한다고 생각해보자. 그러면
+ > 1 epoch = 500 batch size X 2 iterations
+ > 
+ 즉, 500개의 데이터를 2번 반복(iteration)해서 넣어야 1번의 학습(epoch)가 완료된다!
+ 
+ > 10 epochs = 500 batch size X 20 iterations = 1000 total data X 10 times
+
+
