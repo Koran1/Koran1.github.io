@@ -8,7 +8,7 @@
 ############################
 # --- Required options --- #
 ############################
-
+futrue : true
 # Name of website
 title: Koran1's blog
 
