@@ -19,7 +19,7 @@ comments: true
  
    사진과 같이 n 개의 입력 layer가 하나의 출력 layer로 향하는 구조이지만 사실 2 개의 layer 사이에 hidden layer들이 존재한다. 이 hidden layer 들이 가중치 값들이라고 생각하면 된다. 이런 결과를 내는 함수를 활성화 함수(Activation Function)이라고 하는데 DL에서는 데이터를 **비선형** 으로 바꾸기 위해 비선형 함수를 사용한다고 한다. 
    
-   예를 들어 선형 활성화 함수 h(x) = ax (a는 상수)를 가정해보자. 정말 간단하게 한 개의 hidden layer가 있다고 생각하면 출력 y(x) = h(h(x)) 가 되는데 이는 y(x) = bx (b도 상수) 형태로 선형 결과를 내게 된다. 이런 경우 층을 쌓는 혜택이 없어지게 되므로 비선형 함수를 사용한다. 대표적으로 Sigmoid 함수 (결과값: 0~1 사이), Tanh 함수 (결과값: -1~1 사이) 두 개는 출력 범위 제한용으로 마지막 layer 쯤에 사용되고 hidden layer들에는 ReLU(Rectified Linear Unit) 함수를 사용하게 된다.
+   예를 들어 선형 활성화 함수 h(x) = ax (a는 상수)를 가정해보자. 정말 간단하게 한 개의 hidden layer가 있다고 생각하면 출력 y(x) = h(h(x)) 가 되는데 이는 y(x) = bx (b도 상수) 형태로 선형 결과를 내게 된다. 이런 경우 층을 쌓는 혜택이 없어지게 되므로 비선형 함수를 사용한다. 대표적으로 Sigmoid 함수 (결과값: 0 ~ 1 사이), Tanh 함수 (결과값: -1 ~ 1 사이) 두 개는 출력 범위 제한용으로 마지막 layer 쯤에 사용되고 hidden layer들에는 ReLU(Rectified Linear Unit) 함수를 사용하게 된다.
  > 보통 network 층의 개수는 hidden + output layer 의 개수
  
  **역전파(Backpropagation)** 은 예측 값과 정답과의 차이를 역방향으로 전파시키면서 최적의 가중치를 찾아가는 방법이다. 즉, 가중치와 bias 값을 조정하는 것이 학습 과정이 되는 방식이다. 공부도 그렇듯이 목표를 명확히 한 후에 그 목표를 향해 공부 방법을 찾아야 한다. 역전파 역시 목표(label)을 향해 학습해야 하는데 이것이 잘 되고 있는지 확인하는 방법은 Loss function 이다.
