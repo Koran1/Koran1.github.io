@@ -59,4 +59,4 @@ torch.optim.Adam(params, learning rate, ...)
 torch.utils.data.DataLoader(dataset, batch_size, shuffle, ...)
 ~~~
 
-_(shuffle = True 면 랜덤으로 섞어서 들어오므로 Training 할 때 좋으나 Test 할 때는 필요없으므로 False로 둔다)
+_(shuffle = True 면 랜덤으로 섞어서 들어오므로 Training 할 때 좋으나 Test 할 때는 필요없으므로 False로 둔다)_
