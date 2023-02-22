@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MCL_Day 2,3
-subtitle: Backpropagation, Optimizer, Regression, DataLoader, DNN model
+subtitle: Backpropagation, Optimizer, Regression, DataLoader
 gh-repo: daattali/beautiful-jekyll
 gh-badge: 
 tags: [MCL_Internship]
